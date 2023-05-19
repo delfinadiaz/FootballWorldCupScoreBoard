@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using FootballWorldCupScoreBoard.Library.DomainEntities;
+﻿using FootballWorldCupScoreBoard.Library.DomainEntities;
 
 namespace FootballWorldCupScoreBoard.Library.Interfaces
 {

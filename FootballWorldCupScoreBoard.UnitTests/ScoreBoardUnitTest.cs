@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Xunit;
+﻿using FootballWorldCupScoreBoard.Library.DomainEntities;
 using FootballWorldCupScoreBoard.Library.Interfaces;
-using FootballWorldCupScoreBoard.Library.DomainEntities;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using Xunit;
 
 namespace FootballWorldCupScoreBoard.UnitTests
 {
@@ -78,7 +77,7 @@ namespace FootballWorldCupScoreBoard.UnitTests
         }
 
         [Fact]
-        public void GetSummary_Should_ReturnGamesOrderedByTotalScoreOrCreatedDate()
+        public void GetSummary_Should_ReturnGamesOrderedByTotalScoreAndCreatedDate()
         {
             var games = _getNewGames();
 

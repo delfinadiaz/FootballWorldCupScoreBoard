@@ -21,7 +21,9 @@
 
         public void UpdateScore(int v1, int v2)
         {
-            throw new NotImplementedException();
+            ScoreHomeTeam = v1;
+            ScoreAwayTeam = v2;
+            TotalScore = v1 + v2;
         }
     }
 }

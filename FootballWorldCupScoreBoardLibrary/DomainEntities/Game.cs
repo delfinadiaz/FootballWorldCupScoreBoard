@@ -1,4 +1,4 @@
-﻿namespace FootballWorldCupScoreBoard.UnitTests
+﻿namespace FootballWorldCupScoreBoard.Library.DomainEntities
 {
     public class Game
     {
@@ -9,14 +9,14 @@
             TotalScore = 0;
         }
 
-        public string HomeTeam { get; set; }
+        public Team HomeTeam { get; set; }
 
-        public string AwayTeam { get; set; }
+        public Team AwayTeam { get; set; }
 
         public int ScoreHomeTeam { get; set; }
 
         public int ScoreAwayTeam { get; set; }
 
-        public int TotalScore { get; set; } 
+        public int TotalScore { get; set; }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
+using FootballWorldCupScoreBoard.Library.DomainEntities;
 
-namespace FootballWorldCupScoreBoard.UnitTests
+namespace FootballWorldCupScoreBoard.Library.Interfaces
 {
     public interface IScoreBoard
     {

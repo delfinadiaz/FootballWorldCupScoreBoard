@@ -2,7 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using Xunit;
-using System.Linq;
+using FootballWorldCupScoreBoard.Library.Interfaces;
+using FootballWorldCupScoreBoard.Library.DomainEntities;
 
 namespace FootballWorldCupScoreBoard.UnitTests
 {
@@ -18,11 +19,7 @@ namespace FootballWorldCupScoreBoard.UnitTests
         [Fact]
         public void StartGame_Should_AddGameToTheBoard()
         {
-            var game = new Game()
-            {
-                HomeTeam = "Mexico",
-                AwayTeam = "Canada"
-            };
+            var game = _getNewGame();
 
             var gameAdded = _scoreBoard.StartGame(game);
 
@@ -35,11 +32,7 @@ namespace FootballWorldCupScoreBoard.UnitTests
         [Fact]
         public void FinishGame_Should_RemoveGameFromTheBoard()
         {
-            var game = new Game()
-            {
-                HomeTeam = "Mexico",
-                AwayTeam = "Canada"
-            };
+            var game = _getNewGame();
 
             var newGame = _scoreBoard.StartGame(game);
 
@@ -49,5 +42,24 @@ namespace FootballWorldCupScoreBoard.UnitTests
 
             Assert.DoesNotContain(game, currentGames);
         }
+
+        #region Arrange
+
+        private Game _getNewGame()
+        {
+           return new Game()
+            {
+                HomeTeam = new Team()
+                {
+                    Name = "Mexico"
+                },
+                AwayTeam = new Team()
+                {
+                    Name = "Canada"
+                }
+            };
+        }
+
+        #endregion
     }
 }

@@ -10,6 +10,7 @@ namespace FootballWorldCupScoreBoard.Library.Interfaces
         Game StartGame(Game game);
 
         void FinishGame(Game game);
+
         IEnumerable<Game> GetGamesSummary();
     }
 }

@@ -13,6 +13,16 @@ namespace FootballWorldCupScoreBoard.UnitTests
         private IScoreBoard _scoreBoard;
         private int _scoreHomeTeam = 0;
         private int _scoreAwayTeam = 0;
+        private string _uruguay = "Uruguay";
+        private string _italy = "Italy";
+        private string _spain = "Spain";
+        private string _brazil = "Brazil";
+        private string _mexico = "Mexico";
+        private string _canada = "Canada";
+        private string _argentina = "Argentina";
+        private string _australia = "Australia";
+        private string _germany = "Germany";
+        private string _france = "France";
 
         public ScoreBoardUnitTest()
         {
@@ -84,24 +94,24 @@ namespace FootballWorldCupScoreBoard.UnitTests
             Assert.Equal(5, currentGames.Count());
             Assert.Collection(currentGames, 
                     g => {
-                        Assert.Equal("Uruguay", g.HomeTeam.Name);
-                        Assert.Equal("Italy", g.AwayTeam.Name);
+                        Assert.Equal(_uruguay, g.HomeTeam.Name);
+                        Assert.Equal(_italy, g.AwayTeam.Name);
                     },
                     g => {
-                        Assert.Equal("Spain", g.HomeTeam.Name);
-                        Assert.Equal("Brazil", g.AwayTeam.Name);
+                        Assert.Equal(_spain, g.HomeTeam.Name);
+                        Assert.Equal(_brazil, g.AwayTeam.Name);
                     },
                     g => {
-                        Assert.Equal("Mexico", g.HomeTeam.Name);
-                        Assert.Equal("Canada", g.AwayTeam.Name);
+                        Assert.Equal(_mexico, g.HomeTeam.Name);
+                        Assert.Equal(_canada, g.AwayTeam.Name);
                     },
                     g => {
-                        Assert.Equal("Argentina", g.HomeTeam.Name);
-                        Assert.Equal("Australia", g.AwayTeam.Name);
+                        Assert.Equal(_argentina, g.HomeTeam.Name);
+                        Assert.Equal(_australia, g.AwayTeam.Name);
                     },
                     g => {
-                        Assert.Equal("Germany", g.HomeTeam.Name);
-                        Assert.Equal("France", g.AwayTeam.Name);
+                        Assert.Equal(_germany, g.HomeTeam.Name);
+                        Assert.Equal(_france, g.AwayTeam.Name);
                     }
                     );
         }
@@ -115,11 +125,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
             {
                 HomeTeam = new Team()
                 {
-                    Name = "Mexico"
+                    Name = _mexico
                 },
                 AwayTeam = new Team()
                 {
-                    Name = "Canada"
+                    Name = _canada
                 }
             };
         }
@@ -132,11 +142,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
                 {
                     HomeTeam = new Team()
                     {
-                        Name = "Mexico"
+                        Name = _mexico
                     },
                     AwayTeam = new Team()
                     {
-                        Name = "Canada"
+                        Name = _canada
                     },
                     ScoreHomeTeam = 0,
                     ScoreAwayTeam = 5,
@@ -147,11 +157,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
                 {
                     HomeTeam = new Team()
                     {
-                        Name = "Spain"
+                        Name = _spain
                     },
                     AwayTeam = new Team()
                     {
-                        Name = "Brazil"
+                        Name = _brazil
                     },
                     ScoreHomeTeam = 10,
                     ScoreAwayTeam = 2,
@@ -162,11 +172,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
                 {
                     HomeTeam = new Team()
                     {
-                        Name = "Germany"
+                        Name = _germany
                     },
                     AwayTeam = new Team()
                     {
-                        Name = "France"
+                        Name = _france
                     },
                     ScoreHomeTeam = 2,
                     ScoreAwayTeam = 2,
@@ -177,11 +187,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
                 {
                     HomeTeam = new Team()
                     {
-                        Name = "Uruguay"
+                        Name = _uruguay
                     },
                     AwayTeam = new Team()
                     {
-                        Name = "Italy"
+                        Name = _italy
                     },
                     ScoreHomeTeam = 6,
                     ScoreAwayTeam = 6,
@@ -192,11 +202,11 @@ namespace FootballWorldCupScoreBoard.UnitTests
                 {
                     HomeTeam = new Team()
                     {
-                        Name = "Argentina"
+                        Name = _argentina
                     },
                     AwayTeam = new Team()
                     {
-                        Name = "Australia"
+                        Name = _australia
                     },
                     ScoreHomeTeam = 3,
                     ScoreAwayTeam = 1,

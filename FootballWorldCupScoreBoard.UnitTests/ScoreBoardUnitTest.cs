@@ -11,6 +11,8 @@ namespace FootballWorldCupScoreBoard.UnitTests
     public class ScoreBoardUnitTest
     {
         private IScoreBoard _scoreBoard;
+        private int _scoreHomeTeam = 0;
+        private int _scoreAwayTeam = 0;
 
         public ScoreBoardUnitTest()
         {
@@ -51,9 +53,9 @@ namespace FootballWorldCupScoreBoard.UnitTests
 
             var newGame = _scoreBoard.StartGame(game);
 
-            newGame.UpdateScore(1, 0);
-            newGame.UpdateScore(2, 0);
-            newGame.UpdateScore(2, 1);
+            newGame.UpdateScore(++_scoreHomeTeam, _scoreAwayTeam);
+            newGame.UpdateScore(++_scoreHomeTeam, _scoreAwayTeam);
+            newGame.UpdateScore(_scoreHomeTeam, ++_scoreAwayTeam);
 
             IEnumerable<Game> currentGames = _scoreBoard.GetGames();
 

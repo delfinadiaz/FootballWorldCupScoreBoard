@@ -19,11 +19,11 @@
 
         public int TotalScore { get; set; }
 
-        public void UpdateScore(int v1, int v2)
+        public void UpdateScore(int scoreHomeTeam, int scoreAwayTeam)
         {
-            ScoreHomeTeam = v1;
-            ScoreAwayTeam = v2;
-            TotalScore = v1 + v2;
+            ScoreHomeTeam = scoreHomeTeam;
+            ScoreAwayTeam = scoreAwayTeam;
+            TotalScore = scoreHomeTeam + scoreAwayTeam;
         }
     }
 }

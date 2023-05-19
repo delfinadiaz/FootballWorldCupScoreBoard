@@ -19,6 +19,9 @@
 
         public int TotalScore { get; set; }
 
+        public DateTime CreatedDate { get; set; }
+
+
         public void UpdateScore(int scoreHomeTeam, int scoreAwayTeam)
         {
             ScoreHomeTeam = scoreHomeTeam;

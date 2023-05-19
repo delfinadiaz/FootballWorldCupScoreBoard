@@ -27,5 +27,10 @@ namespace FootballWorldCupScoreBoard.Library.DomainEntities
         {
             Games.Remove(game);
         }
+
+        public IEnumerable<Game> GetGamesSummary()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

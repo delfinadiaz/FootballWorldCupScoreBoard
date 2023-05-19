@@ -30,7 +30,7 @@ namespace FootballWorldCupScoreBoard.Library.DomainEntities
 
         public IEnumerable<Game> GetGamesSummary()
         {
-            throw new NotImplementedException();
+            return Games.OrderByDescending(g => g.TotalScore).ThenByDescending( g => g.CreatedDate);
         }
     }
 }

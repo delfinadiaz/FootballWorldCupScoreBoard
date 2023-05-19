@@ -82,7 +82,7 @@ namespace FootballWorldCupScoreBoard.UnitTests
 
             Assert.NotNull(currentGames);
             Assert.Equal(5, currentGames.Count());
-            Assert.Collection(games, 
+            Assert.Collection(currentGames, 
                     g => {
                         Assert.Equal("Uruguay", g.HomeTeam.Name);
                         Assert.Equal("Italy", g.AwayTeam.Name);

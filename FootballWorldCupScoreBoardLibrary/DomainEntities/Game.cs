@@ -18,5 +18,10 @@
         public int ScoreAwayTeam { get; set; }
 
         public int TotalScore { get; set; }
+
+        public void UpdateScore(int v1, int v2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
